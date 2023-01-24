@@ -1,5 +1,7 @@
 # !/usr/bin/env bash
 
+insync start &
+
 # wob (on screen display info)
 $WOBSOCK $XDG_RUNTIME_DIR/wob.sock &
 
