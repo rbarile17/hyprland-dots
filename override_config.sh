@@ -7,6 +7,7 @@ sudo cp ./etc/environment /etc/environment
 sudo chmod -R a+rwx ~/scripts
 sudo chmod a+x ~/.config/hypr/autostart
 sudo chmod -R a+rw ~/.config
+sudo chmod -R a+rw ~/pics
 
 killall -q waybar; \
     /bin/bash ./home/scripts/waybar_top.sh; \
