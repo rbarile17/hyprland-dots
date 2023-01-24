@@ -1,0 +1,130 @@
+{
+    "layer": "top",
+    "height": 28,
+    "spacing": 4,
+    "modules-left": [
+        "custom/home",
+        "wlr/workspaces"
+    ],
+    "modules-center": [
+        "clock"
+    ],
+    "modules-right": [
+        "backlight",
+        "pulseaudio",
+        "custom/gammastep",
+        "battery",
+        "bluetooth",
+        "network"
+    ],
+    "wlr/workspaces": {
+        "format": "{name}",
+        "on-click": "activate",
+        "on-scroll-up": "hyprctl dispatch workspace e+1",
+        "on-scroll-down": "hyprctl dispatch workspace e-1"
+    },
+    "hyprland/window": {
+        "format": "{}"
+    },
+    "tray": {
+        "spacing": 10
+    },
+    "clock": {
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "{:%Y-%m-%d}",
+        "format": "[{:%A %d %m, %H:%M}]"
+    },
+    "cpu": {
+        "format": "[CPU {usage}%",
+        "tooltip": false
+    },
+    "memory": {
+        "format": "RAM {}%"
+    },
+    "bluetooth": {
+        "format": "",
+        "format-disabled": "",
+        "format-connected": "",
+        "tooltip-format": "{controller_alias}\t{controller_address}",
+        "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+        "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+        "on-click": "blueman-manager"
+    },
+    "temperature": {
+        "critical-threshold": 80,
+        "format": "TEMP {temperatureC}°C]",
+        "format-icons": [
+            "",
+            "",
+            ""
+        ],
+        "tooltip": false
+    },
+    "backlight": {
+        "format": "{icon}",
+        "format-icons": [
+            "",
+            ""
+        ]
+    },
+    "battery": {
+        "states": {
+            "warning": 15,
+            "critical": 7
+        },
+        "format": "{icon}",
+        "format-charging": "",
+        "format-plugged": "",
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "tooltip-format": "{power}W - {capacity}%"
+    },
+    "battery#bat2": {
+        "bat": "BAT2"
+    },
+    "network": {
+        "tooltip-format": "{ipaddr}",
+        "format": "{icon}",
+        "format-wifi": "",
+        "format-disconnected": ""
+    },
+    "pulseaudio": {
+        "scroll-step": 5,
+        "format": "{icon}",
+        "format-bluetooth": "{icon}",
+        "format-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": [
+                "",
+                "",
+                ""
+            ]
+        },
+        "on-click": "pavucontrol",
+        "tooltip": false
+    },
+    "custom/gammastep": {
+        "format": "{}",
+        "tooltip": false,
+        "interval": 5,
+        "on-update": "",
+        "exec": "sleep 0.05; $HOME/scripts/gammastep.sh",
+        "on-click": "bash $HOME/scripts/gammastep.sh toggle"
+    },
+    "custom/home": {
+        "format": " ",
+        "on-click": "nemo",
+        "tooltip": false
+    }
+}

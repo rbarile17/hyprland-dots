@@ -1,0 +1,53 @@
+* {
+    background-color: #91a8d0;
+    text-color: #000000;
+    font: "JetBrains Mono 9";
+}
+
+window {
+    anchor: south;
+    location: south west;
+    width: 65%;
+    height: 25px;
+    padding: 4px;
+    children: [ horibox ];
+    y-offset: 26px;
+    x-offset: 35px;
+}
+
+horibox {
+    orientation: horizontal;
+    children: [ prompt, entry, listview ];
+}
+
+listview {
+    layout: horizontal;
+    spacing: 20px;
+    lines: 50;
+}
+
+entry {
+    expand: false;
+    width: 8em;
+    margin: 0;
+    color: black;
+}
+
+element {
+    padding: 0px;
+}
+
+element selected {
+    background-color: #516fa3;
+    text-color: #000000;
+}
+
+element-text, element-icon {
+    background-color: inherit;
+    text-color: inherit;
+    highlight: bold;
+}
+
+#prompt {
+    enabled: false;
+}

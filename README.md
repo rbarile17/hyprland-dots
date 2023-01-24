@@ -1,0 +1,1 @@
+# galaxy-book-flex-archlinux-hyprland
