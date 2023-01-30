@@ -4,6 +4,13 @@ sudo pacman -S brightnessctl exa foot nemo ttf-jetbrains-mono otf-font-awesome \
     gammastep evince mpv htop playerctl git base-devel \
     --noconfirm
 
+cd /opt
+sudo git clone https://aur.archlinux.org/yay-git.git
+sudo chown -R roberto:roberto ./yay-git
+cd yay-git
+makepkg -si
+cd /home/roberto
+
 yay --noprovides --answerdiff None --answerclean None --mflags "--noconfirm --nocheck" -S \
     hyprland-git rofi-lbonn-wayland wob waybar-hyprland-git apostrophe \
     xdg-desktop-portal-hyprland-git batsignal
