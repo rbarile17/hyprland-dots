@@ -1,3 +1,3 @@
 ./install.sh
 
-yay -S brave-bin visual-studio-code-bin
+yay -S brave-bin visual-studio-code-bin bitwarden authy
