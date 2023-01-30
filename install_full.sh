@@ -6,4 +6,5 @@ yay --noprovides --answerdiff None --answerclean None --mflags "--noconfirm --no
 sudo systemctl enable sddm.service
 sudo systemctl enable bluetooth
 
-yay -S brave-bin visual-studio-code-bin bitwarden authy logseq-desktop-bin insync
+yay --noprovides --answerdiff None --answerclean None --mflags "--noconfirm --nocheck" -S \
+    network-manager-applet libsecret gnome-keyring brave-bin visual-studio-code-bin bitwarden authy logseq-desktop-bin insync
