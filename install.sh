@@ -13,6 +13,6 @@ sudo rm -rf yay-git
 
 yay --noprovides --answerdiff None --answerclean None --mflags "--noconfirm --skipinteg --nocheck" -S \
     hyprland-git rofi-lbonn-wayland-git wob-git waybar-hyprland-git apostrophe-git \
-    xdg-desktop-portal-hyprland-git batsignal-git
+    xdg-desktop-portal-hyprland-git batsignal wlogout-git
 
 ./override_config.sh
