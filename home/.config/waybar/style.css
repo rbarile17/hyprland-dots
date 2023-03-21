@@ -1,0 +1,118 @@
+* {
+    font-family: FontAwesome, JetBrains Mono;
+    font-size: 12px;
+}
+
+window#waybar {
+    background-color: #91a8d0;
+    border-bottom: 2px solid #bdc4ce;
+    color: #000000;
+    transition-property: background-color;
+    transition-duration: .5s;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+.modules-right {
+    margin-right: 8px;
+}
+
+#workspaces button {
+    padding: 1px 5px 0 5px;
+    margin-right: 4px;
+    background-color: transparent;
+    color: #000000;
+    box-shadow: inset 0 -1px transparent;
+    border: none;
+    border-radius: 0;
+}
+
+#workspaces button:hover {
+    background: inherit;
+    color: #ffffff;
+    box-shadow: inherit;
+    text-shadow: inherit;
+}
+
+#workspaces button.active {
+    background-color: #516fa3;
+    color: #000000;
+    box-shadow: inset 0 -1px #000000;
+}
+
+#workspaces button.urgent {
+    background-color: #eb4d4b;
+}
+
+#clock,
+#battery,
+#bluetooth,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#custom-media,
+#tray,
+#mode,
+#idle_inhibitor,
+#custom-gammastep {
+    padding: 1px 5px 0 5px;
+    color: #000000;
+}
+
+.modules-left>widget:first-child>#workspaces {
+    margin-left: 0;
+}
+
+.modules-right>widget:last-child>#workspaces {
+    margin-right: 0;
+}
+
+@keyframes blink {
+    to {
+        background-color: #ffffff;
+        color: #000000;
+    }
+}
+
+#battery.critical:not(.charging) {
+    background-color: #f53c3c;
+    color: #ffffff;
+    animation-name: blink;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#network {
+    font-size: 10px;
+}
+
+#network.disconnected,
+#bluetooth.disconnected,
+#pulseaudio.muted {
+    color: rgb(87, 86, 86);
+}
+
+#clock {
+    margin-bottom: 1px;
+}
+
+#temperature {
+    margin-right: 20px;
+}
+
+#custom-home {
+    margin-right: 10px;
+    background-color: #516fa3;
+    color: #000000;
+    padding: 2px 9px 0 10px;
+    font-size: 9px;
+    margin-bottom: 1px;
+}

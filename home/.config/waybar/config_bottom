@@ -1,0 +1,29 @@
+{
+    "layer": "top",
+    "position": "bottom",
+    "height": 32,
+    "spacing": 8,
+
+    "modules-center": [],
+    "modules-right": [
+        "hyprland/window"
+    ],
+    "hyprland/window": {
+        "format": "{}   "
+    },
+    "custom/close-active": {
+        "format": " ",
+        "on-click": "hyprctl dispatch killactive .",
+        "tooltip": false
+    },
+    "custom/next-workspace": {
+        "format": " ",
+        "on-click": "hyprctl dispatch movetoworkspace +1",
+        "tooltip": false
+    },
+    "custom/previous-workspace": {
+        "format": " ",
+        "on-click": "hyprctl dispatch movetoworkspace e-1",
+        "tooltip": false
+    }
+}
